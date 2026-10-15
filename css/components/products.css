@@ -1,0 +1,36 @@
+/* ============================================================
+   products.css — Секция «Продукты» (#products)
+   Карточки идут встык (общий вид «одной ленты»): радиусы
+   срезаются у стыков. Базовые стили карточки — в cases.css.
+   ============================================================ */
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Базовая карточка продукта: прямые углы (стык с соседями) */
+.product-card {
+  border-radius: 2px;
+}
+/* Первая карточка — скругление сверху */
+.product-card--first {
+  border-radius: var(--r2) var(--r2) 2px 2px;
+}
+/* Последняя карточка — скругление снизу */
+.product-card--last {
+  border-radius: 2px var(--r2) var(--r2) 2px;
+}
+
+/* Внутренняя раскладка карточки продукта */
+.product-card-inner {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* У продуктов заголовок отбивается от описания */
+.product-card .case-title {
+  margin-bottom: 12px;
+}

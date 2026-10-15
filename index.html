@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Denis Zakharenkov — Product Owner &amp; Consultant</title>
+
+  <!-- Иконка сайта -->
+  <link rel="icon" type="image/svg" href="./favicon.svg">
+
+  <!-- Шрифты (Google Fonts CDN) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Стили (порядок важен: токены → сброс → база → компоненты → анимации) -->
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/typography.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components/header.css">
+  <link rel="stylesheet" href="./css/components/hero.css">
+  <link rel="stylesheet" href="./css/components/services.css">
+  <link rel="stylesheet" href="./css/components/cases.css">
+  <link rel="stylesheet" href="./css/components/products.css">
+  <link rel="stylesheet" href="./css/components/skills.css">
+  <link rel="stylesheet" href="./css/components/about.css">
+  <link rel="stylesheet" href="./css/components/contact.css">
+  <link rel="stylesheet" href="./css/components/footer.css">
+  <link rel="stylesheet" href="./css/animations.css">
+</head>
+<body>
+
+  <div class="glow"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Denis<span>.</span>Zakharenkov</a>
+
+    <ul class="nav-links" id="navMenu" data-nav-menu>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#cases">Карьера</a></li>
+      <li><a href="#products">Продукты</a></li>
+      <li><a href="#skills">Экспертиза</a></li>
+      <li><a href="#about">О себе</a></li>
+    </ul>
+
+    <a href="#contact" class="nav-cta">Связаться</a>
+
+    <button class="nav-burger" type="button"
+            data-nav-toggle
+            aria-label="Открыть меню"
+            aria-controls="navMenu"
+            aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-head">
+      <img class="hero-img" src="./assets/images/hero-avatar.jpg"
+           alt="Denis Zakharenkov" width="56" height="56">
+      <div class="hero-status">
+        <span class="hero-status-dot"></span>
+        Открыт к проектам · Remote / Relocate
+      </div>
+    </div>
+
+    <h1 class="hero-h1">
+      Product Owner<br>
+      с фокусом на <em>эффективность</em> и <em>UX</em>
+    </h1>
+
+    <p class="hero-sub">
+      Строю высоконагруженные B2B-системы и геймифицированные продукты.
+      Помогаю бизнесу автоматизировать рутину, снижать энтропию
+      и создавать интерфейсы, в которых не нужно обучаться
+    </p>
+
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Обсудить проект →</a>
+      <a href="#cases" class="btn-ghost">Посмотреть кейсы</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-n">8+</div>
+        <div class="stat-l">лет в IT-продуктах</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">120+ млн</div>
+        <div class="stat-l">бюджет на разработку</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">+30%</div>
+        <div class="stat-l">рост выручки клиента</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">28</div>
+        <div class="stat-l">человек в управлении</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="section-header">
+      <span class="section-label">01 — Услуги</span>
+      <span class="section-title-text">Как работаю</span>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <div class="service-tag">Разовый проект</div>
+        <div class="service-title">Проектная работа</div>
+        <div class="service-desc">
+          Аудит продукта, roadmap с нуля, CustDev, расчистка бэклога,
+          стратегия выхода на рынок. Вхожу быстро — даю результат за 2–6 недель.
+        </div>
+        <div class="service-format">Формат: фиксированная стоимость · от 2 нед.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔁</div>
+        <div class="service-tag">Долгосрочно</div>
+        <div class="service-title">Консалтинг / Ретейнер</div>
+        <div class="service-desc">
+          Работаю с вашей командой на постоянной основе: стратегия,
+          менторинг, ключевые встречи, метрики под контролем. Не советую — делаю.
+        </div>
+        <div class="service-format">Формат: ежемесячный ретейнер · от 3 мес.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">👤</div>
+        <div class="service-tag">Аутстаффинг</div>
+        <div class="service-title">PO в вашу команду</div>
+        <div class="service-desc">
+          Становлюсь частью команды и веду продукт изнутри.
+          Discovery, delivery, работа со стейкхолдерами — всё на мне.
+          Full-time или part-time.
+        </div>
+        <div class="service-format">Формат: фикс или T&amp;M · full/part-time</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <div class="service-tag">Найм в штат</div>
+        <div class="service-title">Штатная позиция</div>
+        <div class="service-desc">
+          Рассматриваю офферы в интересные стартапы, enterprise,
+          бизнес где продукт не просто обёртка над экселькой.
+          Готов к релокации, открыт к диалогу.
+        </div>
+        <div class="service-format">Формат: полная занятость · готов к релокации</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section class="section" id="cases">
+    <div class="section-header">
+      <span class="section-label">02 — Карьера</span>
+      <span class="section-title-text">Где работал</span>
+    </div>
+
+    <div class="cases-list">
+      <div class="case-card">
+        <div class="case-top">
+          <div>
+            <div class="case-company">Т1 Иннотех · Москва</div>
+            <div class="case-title">Product Owner — портфель из 4 продуктов</div>
+          </div>
+          <div class="case-period">Май 2022 — Авг 2025</div>
+        </div>
+        <p class="case-desc">
+          Сфера — платформа для управления и автоматизации полного цикла
+          создания ПО. Четыре продукта в портфеле: Сфера.Релизы, Сфера.Quality Gates,
+          Плагинизация и Модуль процессов. Больше 10 внедрений в топ enterprise клиентов.
+          Исчерпан бэклог 2 основных продуктов, защищена концепция rework в плагины.
+          Механизм плагинизации принят архитектурным комитетом, как платформенный стандарт
+        </p>
+        <div class="case-metrics">
+          <span class="metric-chip"><span class="m-val">2.2 → 3.4</span><span class="m-label">средний CSAT продуктов</span></span>
+          <span class="metric-chip"><span class="m-val">−80%</span><span class="m-label">совокупная стоимость владения</span></span>
+          <span class="metric-chip"><span class="m-val">70%</span><span class="m-label">ручных операций автоматизировано</span></span>
+          <span class="metric-chip"><span class="m-val">−30%</span><span class="m-label">стоимость внедрения</span></span>
+        </div>
+        <div class="case-tags">
+          <span class="tag">Enterprise B2B</span>
+          <span class="tag">High-load</span>
+          <span class="tag">Платформа</span>
+          <span class="tag">AI/ML</span>
+          <span class="tag">ITIL</span>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-top">
+          <div>
+            <div class="case-company">Finstek / GMI Markets · Москва / Минск / Гонконг</div>
+            <div class="case-title">Product Owner — back-office &amp; дизайн-система</div>
+          </div>
+          <div class="case-period">Апр 2021 — Мар 2022</div>
+        </div>
+        <p class="case-desc">
+          Fintech-вендор для Forex/Crypto/Stock-брокеров в составе холдинга GMI Markets.
+          Спроектировал торговую платформу, RMS, CRM и кабинет трейдера с нуля.
+          Управлял разработкой и внедрением единой дизайн-системы на все продукты и маркетинг.
+          Провел перезапуск и реинтеграцию сайтов, обеспечил бесшовную миграцию
+          и сохранение бизнес-показателей в переходный период
+        </p>
+        <div class="case-metrics">
+          <span class="metric-chip"><span class="m-val">+30%</span><span class="m-label">рост выручки материнской компании</span></span>
+          <span class="metric-chip"><span class="m-val">5</span><span class="m-label">продуктов спроектировано с нуля</span></span>
+          <span class="metric-chip"><span class="m-val">11</span><span class="m-label">стран — интеграции платёжных систем</span></span>
+        </div>
+        <div class="case-tags">
+          <span class="tag">Fintech</span>
+          <span class="tag">Trading Platform</span>
+          <span class="tag">RMS / CRM</span>
+          <span class="tag">Back-Office</span>
+          <span class="tag">UX/UI</span>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-top">
+          <div>
+            <div class="case-company">Bereza Development · Москва</div>
+            <div class="case-title">Руководитель проектов / Сооснователь</div>
+          </div>
+          <div class="case-period">Окт 2018 — Янв 2021</div>
+        </div>
+        <p class="case-desc">
+          Сооснователь аутсорс-студии: iGaming и e-commerce, штат 30+ человек.
+          Строил процессы всего производственного цикла — от найма до delivery
+          и поддержки. Параллельно вёл ключевые проекты студии.
+        </p>
+        <div class="case-metrics">
+          <span class="metric-chip"><span class="m-val">30+</span><span class="m-label">человек в команде</span></span>
+          <span class="metric-chip"><span class="m-val">5+</span><span class="m-label">внедрений B2B-платформы</span></span>
+          <span class="metric-chip"><span class="m-val">6</span><span class="m-label">собственных продуктов</span></span>
+        </div>
+        <div class="case-tags">
+          <span class="tag">iGaming</span>
+          <span class="tag">SaaS</span>
+          <span class="tag">E-commerce</span>
+          <span class="tag">HRTech</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section" id="products">
+    <div class="section-header">
+      <span class="section-label">03 — Продукты</span>
+      <span class="section-title-text">Над чем работал</span>
+    </div>
+
+    <div class="products-list">
+      <!-- Т1: Сфера.Релизы -->
+      <div class="case-card product-card product-card--first">
+        <div class="product-card-inner">
+          <div>
+            <div class="case-company">Т1 Иннотех · Enterprise Back-Office</div>
+            <div class="case-title">Сфера.Релизы — сквозная автоматизация релизов по ITIL</div>
+            <p class="case-desc">
+              Унаследовал живой продукт с 5 000+ DAU и накопленным техдолгом.
+              Сформировал фокус-группу из релиз-менеджеров и каналы сбора обратной связи.
+              Это позволило сформировать и приоритизировать бэклог, отсеять низкоприоритетные
+              изменения и держать фокус команды на ценных для бизнеса и пользователей задачах
+            </p>
+            <p class="case-desc">
+              Спроектировал версию 2.0 с нуля учитывающую боли пользователей, текущие зависимости
+              и интеграции, автоматизацию критических сценариев и переиспользуемые компоненты
+              платформенного фреймворка. Реализовал сложный процесс параллельной работы версий 1.0 и 2.0
+              во время раннего доступа. Пользователи мигрировали без остановки бизнес-процессов.
+              Вывел 1.0 из эксплуатации после завершения перехода.
+            </p>
+            <div class="case-metrics">
+              <span class="metric-chip"><span class="m-val">5 000+</span><span class="m-label">ежедневных активных пользователей</span></span>
+              <span class="metric-chip"><span class="m-val">70%</span><span class="m-label">ручных операций автоматизировано</span></span>
+              <span class="metric-chip"><span class="m-val">В 10 раз</span><span class="m-label">ускорены типовые сценарии</span></span>
+            </div>
+            <div class="case-tags">
+              <span class="tag">Back-Office</span><span class="tag">Enterprise</span>
+              <span class="tag">Release Management</span><span class="tag">B2B</span>
+              <span class="tag">SDLC</span><span class="tag">Платформа</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Т1: Quality Gates -->
+      <div class="case-card product-card">
+        <div class="product-card-inner">
+          <div>
+            <div class="case-company">Т1 Иннотех · Enterprise Back-Office</div>
+            <div class="case-title">Сфера.Quality Gates — автооценка соответствия релизов критериям</div>
+            <p class="case-desc">
+              Управлял развитием продукта, автоматизирующего инженерные, процессные
+              и проектные контрольные точки. Решение отслеживает соответствие критериям
+              на каждом этапе жизненного цикла релиза, что критически повышает скорость
+              и качество вывода изменений в промышленную эксплуатацию. Без него
+              команды тратили часы на ручную сверку DoD перед каждым промышленным выводом.
+            </p>
+            <p class="case-desc">
+              Провёл анализ практик ITIL и PMBoK, сформировал фокус-группы из ключевых
+              пользователей трёх контуров управления. Закрыл весь продуктовый бэклог
+              и защитил стратегическое решение: реворк standalone-версии в плагин для
+              экосистемы Сфера. Результат — TCO продукта снизился на 80%, стоимость внедрения
+              для новых клиентов -30%.
+            </p>
+            <div class="case-metrics">
+              <span class="metric-chip"><span class="m-val">−80%</span><span class="m-label">совокупная стоимость владения (TCO)</span></span>
+              <span class="metric-chip"><span class="m-val">-30%</span><span class="m-label">стоимость внедрения</span></span>
+              <span class="metric-chip"><span class="m-val">30000+</span><span class="m-label">релизов в год</span></span>
+            </div>
+            <div class="case-tags">
+              <span class="tag">Back-Office</span><span class="tag">Enterprise</span>
+              <span class="tag">Quality Gates</span><span class="tag">B2B</span>
+              <span class="tag">ITIL</span><span class="tag">Платформа</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finstek: Trading Platform + Design System -->
+      <div class="case-card product-card">
+        <div class="product-card-inner">
+          <div>
+            <div class="case-company">Finstek / GMI Markets · Fintech</div>
+            <div class="case-title">Trading Platform &amp; дизайн-система — мультирыночная экосистема</div>
+            <p class="case-desc">
+              Спроектировал с нуля и вывел в эксплуатацию полную торговую экосистему:
+              мультирыночная платформа (Forex, CFD, Crypto, Stocks), Risk Management System,
+              CRM брокера, Liquidity Bridge, личный кабинет трейдера. Платёжные интеграции
+              с системами 11 стран.
+            </p>
+            <p class="case-desc">
+              Внедрил процесс контрибьюта и переиспользования компонентов. Создал прозрачные
+              инструменты, где команды могут безболезненно пополнять и использовать библиотеку
+              без потери качества и консистентности,Обеспечил успешный вывод продуктов
+              на рынок с обновленным цифровым опытом
+            </p>
+            <div class="case-metrics">
+              <span class="metric-chip"><span class="m-val">+30%</span><span class="m-label">рост выручки материнской компании</span></span>
+              <span class="metric-chip"><span class="m-val">5</span><span class="m-label">продуктов выведено в прод с нуля</span></span>
+              <span class="metric-chip"><span class="m-val">11</span><span class="m-label">стран — платёжные интеграции</span></span>
+            </div>
+            <div class="case-tags">
+              <span class="tag">Fintech</span><span class="tag">Trading</span>
+              <span class="tag">RMS</span><span class="tag">CRM</span>
+              <span class="tag">UX/UI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Betserk: live-betting -->
+      <div class="case-card product-card">
+        <div class="product-card-inner">
+          <div>
+            <div class="case-company">Bereza Development · iGaming</div>
+            <div class="case-title">Betserk — мультиплатформ приложение для live-ставок</div>
+            <p class="case-desc">
+              Принял проект в середине пути: бэкенд наполовину готов, документация начата,
+              сроки горят. Провёл аудит, восстановил логику сценариев, приоритизировал
+              функциональность для MVP. Организовал пользовательские тесты
+              и полевые наблюдения — гипотезы проверял на mid-fi прототипах, не в коде.
+            </p>
+            <p class="case-desc">
+              MVP вышел на 2 месяца раньше дедлайна. Заказчик презентовал продукт
+              на международной отраслевой выставке ICE 2020 в Лондоне. После запуска —
+              5+ B2B-внедрений платформы у букмекеров.
+            </p>
+            <div class="case-metrics">
+              <span class="metric-chip"><span class="m-val">−2 мес.</span><span class="m-label">к запланированному дедлайну MVP</span></span>
+              <span class="metric-chip"><span class="m-val">5+</span><span class="m-label">B2B-внедрений у букмекеров</span></span>
+              <span class="metric-chip"><span class="m-val">ICE 2020</span><span class="m-label">презентация в Лондоне</span></span>
+            </div>
+            <div class="case-tags">
+              <span class="tag">iGaming</span><span class="tag">Live-betting</span>
+              <span class="tag">B2B2C</span><span class="tag">SPA</span>
+              <span class="tag">iOS / Android</span><span class="tag">MVP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Online Casino -->
+      <div class="case-card product-card">
+        <div class="product-card-inner">
+          <div>
+            <div class="case-company">Bereza Development · iGaming</div>
+            <div class="case-title">Кросс-платформенное Online casino</div>
+            <p class="case-desc">
+              Унаследовал хаотичный UI Kit без документации. Провёл аудит, токенизировал
+              дизайн-систему — дизайн и разработка заговорили на одном языке,
+              дублирование кода исчезло, t2m сократился.
+            </p>
+            <p class="case-desc">
+              Построил карту взаимодействия сущностей платформы в Miro — это синхронизировало
+              видение всех стейкхолдеров и дало фундамент для масштабирования.
+              Спроектировал личный кабинет игрока, систему достижений и геймификацию:
+              уровни, награды, прогресс — вовлечённость и retention выросли.
+            </p>
+            <div class="case-metrics">
+              <span class="metric-chip"><span class="m-val">↑</span><span class="m-label">вовлечённость и retention после геймификации</span></span>
+              <span class="metric-chip"><span class="m-val">1</span><span class="m-label">дизайн-язык вместо хаоса компонентов</span></span>
+              <span class="metric-chip"><span class="m-val">↓</span><span class="m-label">Дублирование кода и time-to-market</span></span>
+            </div>
+            <div class="case-tags">
+              <span class="tag">iGaming</span><span class="tag">Gambling</span>
+              <span class="tag">B2C</span><span class="tag">Retention</span>
+              <span class="tag">Геймификация</span><span class="tag">UX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car-tool -->
+      <div class="case-card product-card">
+        <div class="product-card-inner">
+          <div>
+            <div class="case-company">Bereza Development · E-commerce</div>
+            <div class="case-title">Car-tool.ru — редизайн интернет-магазина автоинструмента</div>
+            <p class="case-desc">
+              Магазин профессионального оборудования для автосервисов, 30 000+ SKU.
+              Классическое продуктовое противоречие: бизнес хочет современный UX,
+              но бэкенд на Bitrix менять нельзя — на нём десятки интеграций
+              и годы накопленного контента.
+            </p>
+            <p class="case-desc">
+              Разработан персональный дизайн сфокусом на быстрый поиск и chekout.
+              Ключевой результат: фронтенд полностью обновлён, все интеграции сохранены, база товаров,
+              статей и контента мигрировала без единой потери.
+            </p>
+            <div class="case-metrics">
+              <span class="metric-chip"><span class="m-val">30 000+</span><span class="m-label">SKU в каталоге</span></span>
+              <span class="metric-chip"><span class="m-val">0</span><span class="m-label">потерь данных при миграции</span></span>
+              <span class="metric-chip"><span class="m-val">100%</span><span class="m-label">интеграций сохранено</span></span>
+            </div>
+            <div class="case-tags">
+              <span class="tag">E-commerce</span><span class="tag">Bitrix</span>
+              <span class="tag">Редизайн</span><span class="tag">UX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Squadrille HR-tech -->
+      <div class="case-card product-card product-card--last">
+        <div class="product-card-inner">
+          <div>
+            <div class="case-company">Bereza Development · HRTech</div>
+            <div class="case-title">Squadrille — облачный сервис для оценки персонала</div>
+            <p class="case-desc">
+              Стартап в HR-tech: облачный сервис для первичного скрининга соискателей
+              и оценки компетенций сотрудников. Полная ответственность за продукт —
+              CustDev, UX, маркетинговая стратегия и визуальная коммуникация.
+            </p>
+            <p class="case-desc">
+              Начал с исследования: глубинные интервью с HR-специалистами выявили
+              ключевые боли и помогли сформулировать гипотезу ценности. На её основе
+              спроектировал логику продукта и сценарии. Вывел облачный SaaS на рынок
+              с нуля — без legacy, без ограничений устройств и локаций.
+            </p>
+            <div class="case-metrics">
+              <span class="metric-chip"><span class="m-val">0 → 1</span><span class="m-label">продукт выведен на рынок с нуля</span></span>
+              <span class="metric-chip"><span class="m-val">CustDev</span><span class="m-label">в основе каждого продуктового решения</span></span>
+              <span class="metric-chip"><span class="m-val">Cloud</span><span class="m-label">доступ с любых устройств, без установки</span></span>
+            </div>
+            <div class="case-tags">
+              <span class="tag">HRTech</span><span class="tag">SaaS</span>
+              <span class="tag">CustDev</span><span class="tag">B2B</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section-header">
+      <span class="section-label">04 — Экспертиза</span>
+      <span class="section-title-text">Что умею</span>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">Продукт</div>
+        <div class="skill-tags">
+          <span class="tag">Roadmap</span>
+          <span class="tag">CustDev</span>
+          <span class="tag">Unit-экономика</span>
+          <span class="tag">P&amp;L</span>
+          <span class="tag">A/B тесты</span>
+          <span class="tag">GTM-стратегия</span>
+          <span class="tag">Монетизация</span>
+          <span class="tag">Приоритизация</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Управление</div>
+        <div class="skill-tags">
+          <span class="tag">Agile / Scrum</span>
+          <span class="tag">Kanban</span>
+          <span class="tag">SAFe</span>
+          <span class="tag">Lean</span>
+          <span class="tag">DoR / DoD</span>
+          <span class="tag">Управление ожиданиями</span>
+          <span class="tag">Бюджетирование</span>
+          <span class="tag">Риск-менеджмент</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Технологии</div>
+        <div class="skill-tags">
+          <span class="tag">Микросервисы</span>
+          <span class="tag">API-интеграции</span>
+          <span class="tag">AI / ML продукты</span>
+          <span class="tag">BI-аналитика</span>
+          <span class="tag">SQL</span>
+          <span class="tag">SDLC</span>
+          <span class="tag">ERD</span>
+          <span class="tag">ITIL</span>
+          <span class="tag">High-load</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Дизайн</div>
+        <div class="skill-tags">
+          <span class="tag">UX-проектирование</span>
+          <span class="tag">Дизайн-системы</span>
+          <span class="tag">Figma</span>
+          <span class="tag">User Story</span>
+          <span class="tag">CJM / JTBD</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-header">
+      <span class="section-label">05 — О себе</span>
+      <span class="section-title-text">Кто я</span>
+    </div>
+
+    <div class="about-grid">
+      <div>
+        <p class="about-text">
+          Продуктовый лидер с 8+ годами опыта
+          Начинал с продуктового дизайна — и это не случайность. Сейчас я думаю как PO,
+          но вижу глазами пользователя. <strong>Путь от дизайнера до Product Owner</strong>
+          в highload продуктах для крупнейших банков дал редкое сочетание: понимаю
+          бизнес-логику, то как это ощущается на экране и технические ограничения.
+        </p>
+        <br>
+        <p class="about-text">
+          Мне интересны <strong>сложные B2B и enterprise-системы</strong> — там, где
+          неочевидные сценарии, высокая плотность функций и требовательные пользователи.
+          Back-Office, iGaming, CRM, трекеры задач, административные панели — мой профиль.
+        </p>
+        <br>
+        <p class="about-text">
+          В четырёх компаниях выстраивал процессы с нуля. Умею говорить с бизнесом,
+          разработчиками и аналитиками на одном языке — и переводить между ними.
+          Решения принимаю на основе Data Driven подхода и анализа метрик.
+          <strong>Не просто советую, а делаю и отвечаю за результат.</strong>
+        </p>
+      </div>
+
+      <div class="about-aside">
+        <div class="about-photo">
+          <img src="./assets/images/about-photo.jpg" alt="Denis Zakharenkov">
+        </div>
+
+        <div class="about-block">
+          <div class="about-block-label">Локация</div>
+          <div class="about-block-val">Москва<br><span>Готов к релокации и командировкам</span></div>
+        </div>
+        <div class="about-block">
+          <div class="about-block-label">Языки</div>
+          <div class="about-block-val">Русский — родной<br><span>English — B2 Upper Intermediate</span></div>
+        </div>
+        <div class="about-block">
+          <div class="about-block-label">Образование</div>
+          <div class="about-block-val">
+            <span>Product Heroes (Красинский), 2024</span><br>
+            <span>Сертификат UX-дизайнера RDC, 2022</span><br>
+            СмолГУ — Прикладная математика<br>и информатика, 2010
+          </div>
+        </div>
+        <div class="about-block">
+          <div class="about-block-label">Домены</div>
+          <div class="about-block-val">
+            <span>Fintech · iGaming</span><br>
+            Enterprise B2B · HRTech<br>
+            E-commerce · CRM/RMS
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="contact-inner">
+      <div class="contact-sup">06 — Контакт</div>
+      <h2 class="contact-h">Есть задача — пишите</h2>
+      <p class="contact-sub">
+        Расскажите о продукте, команде и целях.
+        Без лишних формальностей — просто в мессенджер.<br>
+        Отвечаю в течение дня.
+      </p>
+      <div class="contact-btns">
+        <a href="https://t.me/enzoamore" class="btn-primary" target="_blank">Написать в Telegram →</a>
+        <a href="https://t.me/thegodproduct" class="btn-ghost">Подписаться на канал</a>
+      </div>
+      <div class="contact-links">
+        <a href="https://t.me/enzoamore" class="contact-link" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 5L2 12.5l7 1M21 5l-2.5 15L9 13.5M21 5L9 13.5m0 0v5l3.5-3"/></svg>
+          @enzoamore
+        </a>
+        <a href="mailto:zakharenkov_sml@mail.ru" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          zakharenkov_sml@mail.ru
+        </a>
+        <a href="tel:+79203046362" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.02z"/></svg>
+          +7 920 304-63-62
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <footer>
+    <span class="footer-copy">© 2026 Denis Zakharenkov</span>
+    <span class="footer-made">Product Owner · <span>Available for work</span></span>
+  </footer>
+
+  <!-- Яндекс.Метрика: пиксель для браузеров с отключённым JS -->
+  <noscript>
+    <div><img class="ym-pixel" src="https://mc.yandex.ru/watch/109188921" alt=""></div>
+  </noscript>
+
+  <!-- Точка входа JS (ES-модули, Vite) -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* ============================================================
+   contact.css — Секция «Контакт» (#contact)
+   ============================================================ */
+
+.contact-inner {
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+/* Свечение в верхней части блока */
+.contact-inner::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 200px;
+  background: radial-gradient(ellipse, rgba(124,58,237,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contact-sup {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--v-light);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.contact-h {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.contact-sub {
+  font-size: 15px;
+  color: var(--sub);
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.contact-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--sub);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+.contact-link:hover { color: var(--v-light); }
+.contact-link svg { width: 14px; height: 14px; opacity: 0.6; }
+
+/* ─── Адаптив ─── */
+@media (max-width: 700px) {
+  .contact-inner { padding: 32px 20px; }
+}

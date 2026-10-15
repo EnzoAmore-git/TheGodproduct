@@ -1,0 +1,127 @@
+/* ============================================================
+   hero.css — Первый экран
+   ============================================================ */
+
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 40px 80px;
+}
+
+/* ─── Шапка hero: аватар + бейдж статуса ─── */
+.hero-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.hero-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 1.5px solid rgba(124,58,237,0.4);
+  box-shadow: 0 0 0 4px rgba(124,58,237,0.08);
+}
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--v-light);
+  background: var(--v-dim);
+  border: 0.5px solid var(--v-border);
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.6s ease both;
+}
+/* Внутри .hero-head нижний отступ бейджу не нужен */
+.hero-head .hero-status { margin-bottom: 0; }
+
+.hero-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px rgba(74,222,128,0.6);
+  animation: pulse 2s ease infinite;
+}
+
+/* ─── Заголовок ─── */
+.hero-h1 {
+  font-size: clamp(38px, 6vw, 64px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 20px;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+.hero-h1 em {
+  font-style: normal;
+  color: var(--v-light);
+  position: relative;
+}
+
+/* ─── Подзаголовок ─── */
+.hero-sub {
+  font-size: 17px;
+  color: var(--sub);
+  line-height: 1.7;
+  max-width: 540px;
+  margin-bottom: 36px;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+
+/* ─── Кнопки ─── */
+.hero-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+
+/* ─── Статистика ─── */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+
+.stat-card {
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: var(--r2);
+  padding: 18px 20px;
+  transition: border-color 0.2s;
+}
+.stat-card:hover { border-color: var(--v-border); }
+
+.stat-n {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--v-light);
+  letter-spacing: -0.02em;
+  font-family: var(--display);
+}
+
+.stat-l {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--sub);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* ─── Адаптив ─── */
+@media (max-width: 700px) {
+  .hero { padding: 60px 20px 50px; }
+  .hero-stats { grid-template-columns: 1fr 1fr; }
+}

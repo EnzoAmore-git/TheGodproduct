@@ -1,0 +1,53 @@
+/* ============================================================
+   skills.css — Секция «Экспертиза» (#skills)
+   В оригинале сетка была задана инлайн-стилем (2 колонки),
+   продублировавшим «мёртвое» правило .skills-grid из <style>.
+   Здесь закреплена фактическая раскладка — 2 колонки.
+   ============================================================ */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.skill-group {
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: var(--r2);
+  padding: 22px;
+}
+
+.skill-group-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--v-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* Линия, тянущаяся от заголовка группы вправо */
+.skill-group-title::after {
+  content: '';
+  flex: 1;
+  height: 0.5px;
+  background: var(--border);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+/* Теги компетенций чуть светлее базовых тегов кейсов */
+.skill-tags .tag { color: var(--sub); }
+
+/* ─── Адаптив ─── */
+@media (max-width: 700px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}

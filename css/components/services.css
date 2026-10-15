@@ -1,0 +1,83 @@
+/* ============================================================
+   services.css — Секция «Услуги» (#services)
+   ============================================================ */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.service-card {
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: var(--r2);
+  padding: 24px;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+/* Тонкая акцентная линия по верхнему краю при hover */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--v), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.service-card:hover { border-color: var(--v-border); background: var(--bg3); }
+.service-card:hover::before { opacity: 1; }
+
+.service-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--v-dim);
+  border: 0.5px solid var(--v-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+.service-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--v-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.service-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.service-desc {
+  font-size: 13px;
+  color: var(--sub);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.service-format {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  border-top: 0.5px solid var(--border);
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+/* ─── Адаптив ─── */
+@media (max-width: 700px) {
+  .services-grid { grid-template-columns: 1fr; }
+}

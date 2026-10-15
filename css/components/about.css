@@ -1,0 +1,68 @@
+/* ============================================================
+   about.css — Секция «О себе» (#about)
+   ============================================================ */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-text {
+  font-size: 16px;
+  color: var(--sub);
+  line-height: 1.8;
+}
+.about-text strong { color: var(--text); font-weight: 500; }
+
+/* ─── Правая колонка ─── */
+.about-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 220px;
+}
+
+/* Фотография (инлайн-контейнер перенесён в класс) */
+.about-photo {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 0.5px solid rgba(124,58,237,0.2);
+  margin-bottom: 12px;
+}
+.about-photo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  max-height: 260px;
+}
+
+/* ─── Информационные блоки ─── */
+.about-block {
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: var(--r);
+  padding: 16px;
+}
+.about-block-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.about-block-val {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.6;
+}
+.about-block-val span { color: var(--v-light); }
+
+/* ─── Адаптив ─── */
+@media (max-width: 700px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
