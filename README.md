@@ -28,10 +28,33 @@ npm run preview   # локальный предпросмотр собранно
 
 ## Деплой
 
-- **Хостинг (thegodproduct.ru):** выполнить `npm run build` и выложить содержимое
-  папки `dist/` в веб-корень (на Beget это `public_html/`).
-- **GitHub Pages:** сначала изменить `base` в `vite.config.js` на `'./'`
-  (или `'/<имя-репозитория>/'`), затем собрать и опубликовать `dist/`.
+Базовый путь сборки задаётся переменной окружения `VITE_BASE`
+(по умолчанию `/`). Это позволяет собирать один и тот же код под хостинг и Pages.
+
+### Хостинг (thegodproduct.ru)
+
+```bash
+npm run build        # base = '/'
+```
+
+Содержимое папки `dist/` выложить в веб-корень (на Beget это `public_html/`).
+
+### GitHub Pages (автоматически)
+
+Workflow `.github/workflows/deploy-pages.yml` собирает сайт при пуше в `main`
+и публикует его на **https://enzoamore-git.github.io/TheGodproduct/**.
+Сборка выполняется с `VITE_BASE=/TheGodproduct/`.
+
+Разовая настройка: **Settings → Pages → Source: GitHub Actions**
+(workflow пытается включить Pages сам при первом запуске).
+
+Проверить Pages-сборку локально:
+
+```powershell
+$env:VITE_BASE='/TheGodproduct/'
+npm run build
+npm run preview
+```
 
 ---
 
